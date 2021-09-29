@@ -10,23 +10,15 @@ namespace ConsoleApp
     {
         static void Main()
         {
-            //TryWebAPI();
+            TryWebAPI();
             TryDatabase();
         }
 
         private static void TryWebAPI()
         {
-            //AccountController accountAPI = new AccountController();
-            //Console.WriteLine("Get:");
-            //foreach (Account account in accountAPI.Get())
-            //{
-            //    Console.WriteLine(account);
-            //}
-
             Console.WriteLine("Using rest client");
             AccountAPIConsumercs accountApi = new AccountAPIConsumercs();
 
-            //accountApi.AddAccount(new Account(0, "Bea Bobafetta", 463));
             accountApi.DeleteById(16);
 
             foreach (Account account in accountApi.GetAllAccounts())
